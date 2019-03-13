@@ -1,0 +1,18 @@
+
+{# extendemos nuestra pantilla #}
+
+{%  extends 'layout/layout.html' %}
+   {% import 'view.html' as data %}
+
+        {% block title %} {{ title }}{% endblock %}
+
+
+{% block content %}
+        <div class="jumbotron">
+          <h1 class="display-4">Welcome To Swig template</h1>
+          <p class="lead">This is tutorial you wil learn the data base dinamic render process .</p>
+          <hr class="my-4">
+           <h3> {{ data.datos }} </h3>
+          <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+        </div>
+  {%  endblock %}

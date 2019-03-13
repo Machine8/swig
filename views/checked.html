@@ -1,0 +1,14 @@
+{% macro input(id, value, label)%}
+
+
+
+
+    <input type="{{ type|default("radio") }}" name="{{ name|default("rating") }}" id="{{ id }}" value="{{ value }}" class="check-item">
+    <label class="bg-box" for="{{ id }}">
+      <i id="{{ id }}" class="fa fa-star icon-star"></i>
+    </label>
+
+
+
+
+{% endmacro %}

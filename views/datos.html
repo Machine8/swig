@@ -1,0 +1,5 @@
+{% macro h3( text ) %}
+      {% for data in courses %}
+     <h3> {{ text|default('data.descripcion') }}</h3>
+       {%  endfor %}
+    {% endmacro %}

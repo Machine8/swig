@@ -1,0 +1,49 @@
+{%  extends 'layout/layout.html' %}
+  {% block title %} Register {% endblock %}
+
+{% block content %}
+
+<form class="" action="/user/register" method="POST" >
+
+
+<div class="input-group">
+
+  <input type="text"  name="username" class="form-control">
+
+</div>
+
+<div class="input-group">
+
+  <input type="password" name="password" class="form-control">
+
+</div>
+
+<div class="input-group">
+
+  <input type="number" name="age" class="form-control">
+
+</div>
+
+
+
+<div class="input-group">
+
+  <input type="text" name="state" class="form-control">
+
+</div>
+
+<div class="input-group">
+
+  <input type="text"  name="role" class="form-control">
+
+</div>
+
+
+
+
+  <input type="submit"   class="btn btn-success">
+
+
+
+</form>
+{%  endblock %}

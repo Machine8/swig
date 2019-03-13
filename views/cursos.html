@@ -1,0 +1,31 @@
+{%  extends 'layout/layout.html' %}
+
+ {% import 'forms.html' as forms %}
+ {% import 'checked.html' as checked %}
+
+{% block content %}
+<div class="col-md-10" class="mt-5">
+   <form action="/cursos" method="POST" >
+
+       {{ forms.input("text", "titulo", "Your titulo", titulo.err) }}
+
+       {{ forms.input("text", "descripcion", "descripcion") }}
+
+       {{ forms.input("text", "categoria", "categoria") }}
+
+
+
+       <div class="box-input">
+         <h4>Rating</h4>
+         <p class="list">
+       {{ checked.input("n1", "1","start1") }}
+        {{ checked.input("n2", "2","start2") }}
+          {{ checked.input("n3", "3","start3") }}
+          </p>
+       </div>
+
+     {{ forms.button() }}
+   </form>
+   </div>
+   {% parent %}
+{% endblock %}

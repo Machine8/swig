@@ -1,0 +1,17 @@
+{% macro div(id, dato) %}
+   {% set datos = dato %}
+  {% for data in datos  %}
+
+      <div class="{{ type|default("card mt-2") }}" id="{{ id }}" >
+        <div class="card-header">
+          {{ data.username }}
+          {{ data.role }}
+        </div>
+
+        <div class="card-body">
+
+            {{ data.age }}
+        </div>
+      </div>
+      {% endfor %}
+{% endmacro %}

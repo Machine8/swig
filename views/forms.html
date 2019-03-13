@@ -1,0 +1,19 @@
+{% macro input(type, name, label) %}
+<div class="input-group mb-3">
+<div class="input-group-prepend">
+  <span class="input-group-text" id="basic-addon1">
+      <labe for="{{ name }}">{{ label }}</labe>
+  </span>
+     <input type="{{ type }}" name="{{ name }}" id="{{ name }}" class="form-control">
+   </div>
+</div>
+    {% endmacro %}
+
+
+
+
+    {% macro button type label %}
+  <div class="input-group mb-3">
+    <button type="{{ type|default("submit") }}">{{ label|default("Send") }}</button>
+   </div>
+    {% endmacro %}
